@@ -13,6 +13,8 @@
 </head>
 <body>
     <header>
+        <button id="theme-toggle">🌙 / ☀️</button>
+
         <h1 class="title">
             spark<span class="title-blink">_</span>
             <a href="https://docs.google.com/document/d/1My-jYaf-8mOTmdXAtjj3_PuOP_TXhAPCn7qatrkTl2A/edit?usp=sharing">
@@ -38,9 +40,40 @@
 
 
     <script>
+            
         setTimeout(() => {
-          window.location.href = "invoices.html";
+            window.location.href = "invoices.html";
         }, 1800);
+
+
+
+        document.querySelectorAll('.title-spark, .invoice-spark')
+        .forEach(el => {
+        el.addEventListener('animationend', () => {
+            el.style.pointerEvents = 'auto';
+        });
+        });
+
+
+
+
+        const toggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        if(localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark-mode');
+        }
+
+        toggle.addEventListener('click', () => {
+            html.classList.toggle('dark-mode');
+
+            if(html.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
     </script>
 
 

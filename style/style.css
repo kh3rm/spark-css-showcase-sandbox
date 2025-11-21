@@ -60,7 +60,7 @@ _________________________________________________________ */
 
 /* _________________________________________________________
 
-   COLOR VARIABLES - DARK MODE
+   COLOR VARIABLES - DARK MODE (SYSTEM/BROWSER PREFERENCE)
 _________________________________________________________ */
 
 @media (prefers-color-scheme: dark) {
@@ -96,6 +96,39 @@ _________________________________________________________ */
         background-color: var(--selection-bg);
     }
 }
+
+/* _________________________________________________________
+
+   COLOR VARIABLES - DARK MODE TOGGLED
+_________________________________________________________ */
+
+    html.dark-mode {
+        --color-text-primary: #fbfdff;
+        --color-text-secondary: #ddd;
+        --color-text-inverted: #000000;
+
+        --background-header: #563369;
+        --background-header-hover: #8048ad;
+
+        --background-page: #1f1f1f;
+
+        --table-header-bg: #574560;
+        --table-header-text: #ffffff;
+
+        --table-row-even-bg: #3a3a3a;
+        --table-row-hover-bg: #4a4a4a;
+        --table-row-text: #ffffff;
+
+        --card-bg: #2b2b2b;
+        --card-border: rgba(255, 255, 255, 0.1);
+        --card-shadow: 0 4px 12px rgba(0,0,0,0.5);
+
+        --button-text: #ffffff;
+
+        --selection-bg: #193a1d;
+
+        --link-visited: rgb(188, 164, 204);
+    }
 
 /* _________________________________________________________
 
@@ -301,7 +334,7 @@ _________________________________________________________ */
 
 @media (max-width: 768px) {
     .table-wrapper {
-        width: calc(100% - var(--unit-2)) !important; /* full width minus small spacing */
+        width: calc(100% - var(--unit-2)) !important;
         margin: var(--unit-1) !important;
         padding: var(--unit-1) !important;
     }
@@ -322,4 +355,12 @@ _________________________________________________________ */
 .intro-text {
     margin-top: 2rem;
     text-align: center;
+}
+
+#theme-toggle {
+    position:absolute;
+    background-color: transparent;
+    padding: 0.7rem;
+    top: 1rem;
+    right: 1rem;
 }
