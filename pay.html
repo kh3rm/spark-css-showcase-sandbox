@@ -30,16 +30,16 @@
                 </div>
         </nav>
     </header>  
-    
-    <div class="intro-text"><h1>Click the invoice-icon in the upper-left.</h1></div>
+    <div class="pay-wrapper">
+        <a href="simulate-payment.html">
+            <button class="pay-option"><img class="swish-payment" src="img/swish.svg" alt="Swish Payment SVG"></button>
+        </a>
 
-<script>
-    document.querySelectorAll('.title-spark, .invoice-spark')
-    .forEach(el => {
-      el.addEventListener('animationend', () => {
-        el.style.pointerEvents = 'auto';
-      });
-    });</script>
+        <a href="simulate-payment.html">
+            <button class="pay-option"><img class="klarna-payment" src="img/klarna.svg" alt="Klarna Payment SVG"></button>
+        </a>
+    </div>
+
 
 </body>
 </html>

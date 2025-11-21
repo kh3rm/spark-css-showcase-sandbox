@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Doto:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+
+  </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">
+            spark<span class="title-blink">_</span>
+            <a href="https://docs.google.com/document/d/1My-jYaf-8mOTmdXAtjj3_PuOP_TXhAPCn7qatrkTl2A/edit?usp=sharing">
+                <img class="title-spark" src="img/scooter-nobg.svg" alt="Spark Scooter SVG">
+            </a>
+
+            
+        </h1>
+
+        <nav>
+                <div class="navlink-box">
+                    <a href="invoices.html">
+                        <img class="invoice-spark" src="img/invoice.svg" alt="Spark Scooter SVG">
+                    </a>
+                </div>
+        </nav>
+    </header>  
+    <div class="table-wrapper">
+        <table>
+            <h1 class="table-header">Invoices</h1>
+            <thead>
+                <tr>
+                    <th>Issued</th>
+                    <th>Due Date</th>
+                    <th>Amount (SEK)</th>
+                    <th>Payed</th>
+                    <th>Relates to</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025-01-01</td>
+                    <td>2025-01-31</td>
+                    <td>95</td>
+                    <td class="pay-cell"><span class="checkmark">✔</span></td>
+                    <td><a href="#id4832">#4832</a></td>
+                </tr>
+                <tr>
+                    <td>2025-01-03</td>
+                    <td>2025-02-02</td>
+                    <td>47</td>
+                    <td class="pay-cell"><a href="pay.html" class="pay-button">Pay</a></td>
+                    <td><a href="#id9124">#9124</a></td>
+                </tr>
+                <tr>
+                    <td>2025-01-05</td>
+                    <td>2025-02-04</td>
+                    <td>132</td>
+                    <td class="pay-cell"><a href="pay.html" class="pay-button">Pay</a></td>
+                    <td><a href="#id5531">#5531</a></td>
+                </tr>
+                <tr>
+                    <td>2025-01-07</td>
+                    <td>2025-02-06</td>
+                    <td>59</td>
+                    <td class="pay-cell"><span class="checkmark">✔</span></td>
+                    <td><a href="#id7748">#7748</a></td>
+                </tr>
+                <tr>
+                    <td>2025-01-09</td>
+                    <td>2025-02-08</td>
+                    <td>148</td>
+                    <td class="pay-cell"><a href="pay.html" class="pay-button">Pay</a></td>
+                    <td><a href="#id1203">#1203</a></td>
+                </tr>
+                <tr>
+                    <td>2025-01-11</td>
+                    <td>2025-02-10</td>
+                    <td>26</td>
+                    <td class="pay-cell"><span class="checkmark">✔</span></td>
+                    <td><a href="#id6920">#6920</a></td>
+                </tr>
+                <tr>
+                    <td>2025-01-13</td>
+                    <td>2025-02-12</td>
+                    <td>73</td>
+                    <td class="pay-cell"><a href="pay.html" class="pay-button">Pay</a></td>
+                    <td><a href="#id8841">#8841</a></td>
+                </tr>
+                <tr>
+                    <td>2025-01-15</td>
+                    <td>2025-02-14</td>
+                    <td>121</td>
+                    <td class="pay-cell"><span class="checkmark">✔</span></td>
+                    <td><a href="#id3307">#3307</a></td>
+                </tr>
+                <tr>
+                    <td>2025-01-17</td>
+                    <td>2025-02-16</td>
+                    <td>42</td>
+                    <td class="pay-cell"><a href="pay.html" class="pay-button">Pay</a></td>
+                    <td><a href="#id5599">#5599</a></td>
+                </tr>
+                <tr>
+                    <td>2025-01-19</td>
+                    <td>2025-02-18</td>
+                    <td>88</td>
+                    <td class="pay-cell"><span class="checkmark">✔</span></td>
+                    <td><a href="#id2415">#2415</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<script>
+    document.querySelectorAll('.title-spark, .invoice-spark')
+    .forEach(el => {
+      el.addEventListener('animationend', () => {
+        el.style.pointerEvents = 'auto';
+      });
+    });</script>
+
+</body>
+</html>
