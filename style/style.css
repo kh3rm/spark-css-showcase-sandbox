@@ -149,3 +149,8 @@ header:hover {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+nav {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+}
