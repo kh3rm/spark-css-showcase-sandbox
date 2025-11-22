@@ -22,45 +22,44 @@ _________________________________________________________ */
     --unit-11: 5.5rem;     /* 88px */
     --unit-12: 6rem;       /* 96px */
 
-    /* ---- COLOR VARIABLES – LIGHT MODE ---- */
-    /* Text */
+/* _________________________________________________________
+
+   COLOR VARIABLES - LIGHT MODE DEFAULT
+_________________________________________________________ */
+
     --color-text-primary: black;
     --color-text-secondary: #333;
     --color-text-inverted: #ffffff;
 
-    /* Header / Title */
     --background-header: rgb(253, 157, 66);
     --background-header-hover: rgb(255, 148, 48);
 
-    /* Page Background */
     --background-page: #ffffff;
 
-    /* Table Colors */
     --table-header-bg: #ec7d22;
     --table-header-text: #ffffff;
     --table-row-even-bg: #facbb5;
     --table-row-hover-bg: #faad89;
     --table-row-text: #000000;
 
-    /* Cards / Wrappers */
-    --card-bg: #ffffff;
-    --card-border: rgba(0, 0, 0, 0.08);
-    --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --payment-option-bg: #ffffff;
+    --pay-bg: #ffffff;
+    --pay-border: rgba(0, 0, 0, 0.08);
+    --pay-shadow: 0 4px 12px rgba(0,0,0,0.08);
 
-    /* Buttons */
     --button-text: #000;
+
     --button-hover-scale: 1.04;
 
-    /* Selection Highlight */
     --selection-bg: rgb(255, 242, 53);
 
-    /* Link-visited */
     --link-visited: #551A8B;
 }
 
 /* _________________________________________________________
 
    COLOR VARIABLES - DARK MODE (SYSTEM/BROWSER PREFERENCE)
+
 _________________________________________________________ */
 
 @media (prefers-color-scheme: dark) {
@@ -81,54 +80,87 @@ _________________________________________________________ */
         --table-row-hover-bg: #4a4a4a;
         --table-row-text: #ffffff;
 
-        --card-bg: #2b2b2b;
-        --card-border: rgba(255, 255, 255, 0.1);
-        --card-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        --payment-option-bg: #d6b6f0;;
+        --pay-bg: #2b2b2b;
+        --pay-border: rgba(255, 255, 255, 0.1);
+        --pay-shadow: 0 4px 12px rgba(0,0,0,0.5);
 
         --button-text: #ffffff;
 
-        --selection-bg: #193a1d;
+        --selection-bg: #921ae2;
 
-        --link-visited: rgb(188, 164, 204);
-    }
-
-    ::selection {
-        background-color: var(--selection-bg);
+        --link-visited: rgb(219, 194, 236);
     }
 }
 
 /* _________________________________________________________
 
-   COLOR VARIABLES - DARK MODE TOGGLED
+   MANUAL TOGGLE OVERRIDE - DARK MODE
+
 _________________________________________________________ */
 
-    html.dark-mode {
-        --color-text-primary: #fbfdff;
-        --color-text-secondary: #ddd;
-        --color-text-inverted: #000000;
+html.dark-mode {
+    --color-text-primary: #fbfdff;
+    --color-text-secondary: #ddd;
+    --color-text-inverted: #000000;
 
-        --background-header: #563369;
-        --background-header-hover: #8048ad;
+    --background-header: #563369;
+    --background-header-hover: #8048ad;
 
-        --background-page: #1f1f1f;
+    --background-page: #1f1f1f;
 
-        --table-header-bg: #574560;
-        --table-header-text: #ffffff;
+    --table-header-bg: #574560;
+    --table-header-text: #ffffff;
 
-        --table-row-even-bg: #3a3a3a;
-        --table-row-hover-bg: #4a4a4a;
-        --table-row-text: #ffffff;
+    --table-row-even-bg: #3a3a3a;
+    --table-row-hover-bg: #4a4a4a;
+    --table-row-text: #ffffff;
 
-        --card-bg: #2b2b2b;
-        --card-border: rgba(255, 255, 255, 0.1);
-        --card-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    --payment-option-bg: #9d8ea8;
+    --pay-bg: #2b2b2b;
+    --pay-border: rgba(255, 255, 255, 0.1);
+    --pay-shadow: 0 4px 12px rgba(0,0,0,0.5);
 
-        --button-text: #ffffff;
+    --button-text: #ffffff;
 
-        --selection-bg: #193a1d;
+    --selection-bg: #921ae2;
 
-        --link-visited: rgb(188, 164, 204);
-    }
+    --link-visited: rgb(219, 194, 236);
+}
+
+/* _________________________________________________________
+
+   MANUAL TOGGLE OVERRIDE - LIGHT MODE
+
+_________________________________________________________ */
+
+html.light-mode {
+    --color-text-primary: black;
+    --color-text-secondary: #333;
+    --color-text-inverted: #ffffff;
+
+    --background-header: rgb(253, 157, 66);
+    --background-header-hover: rgb(255, 148, 48);
+
+    --background-page: #ffffff;
+
+    --table-header-bg: #ec7d22;
+    --table-header-text: #ffffff;
+    --table-row-even-bg: #facbb5;
+    --table-row-hover-bg: #faad89;
+    --table-row-text: #000000;
+
+    --payment-option-bg: #ffffff;
+    --pay-bg: #ffffff;
+    --pay-border: rgba(0, 0, 0, 0.08);
+    --pay-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    --button-text: #000;
+
+    --selection-bg: rgb(255, 242, 53);
+
+    --link-visited: #551A8B;
+}
 
 /* _________________________________________________________
 
@@ -237,10 +269,10 @@ _________________________________________________________ */
 .table-wrapper {
     margin: var(--unit-6) auto;
     max-width: 700px;
-    background: var(--card-bg);
+    background: var(--pay-bg);
     padding: var(--unit-3);
     border-radius: var(--unit-3);
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--pay-shadow);
 }
 
 table {
@@ -250,7 +282,9 @@ table {
     overflow: hidden;
 }
 
-table a:visited {
+
+table a:visited,
+table a {
     color: var(--link-visited);
 }
 
@@ -288,10 +322,10 @@ _________________________________________________________ */
     max-width: 700px;
     min-width: 500px;
     min-height: 500px;
-    background: var(--card-bg);
+    background: var(--pay-bg);
     padding: var(--unit-3);
     border-radius: var(--unit-3);
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--pay-shadow);
 }
 
 .pay-success-container {
@@ -307,11 +341,11 @@ _________________________________________________________ */
     margin: var(--unit-3);
     width: 250px;
     height: 90px;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    background: var(--payment-option-bg);
+    border: 1px solid var(--pay-border);
     padding: var(--unit-2);
     border-radius: var(--unit-2);
-    box-shadow: 0 3px 6px var(--card-border);
+    box-shadow: 0 3px 6px var(--pay-border);
     transition: transform 0.24s ease-in-out;
 }
 
@@ -363,4 +397,17 @@ _________________________________________________________ */
     padding: 0.7rem;
     top: 1rem;
     right: 1rem;
+}
+
+
+.gif-crop {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.payment-success {
+    width: 290px;
+    height: 290px;
 }
